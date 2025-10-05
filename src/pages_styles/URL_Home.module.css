@@ -1,0 +1,31 @@
+.homeDecorationImg {
+  width: 150px;
+  height: 150px;
+  border-radius: 16px;
+  margin: 8px;
+  object-fit: cover;
+  transition: opacity 0.1s ease-in;
+  box-shadow: 0px 0px 8px 1px #ffffff;
+}
+
+.homeDecorationMegaImg {
+  width: 325px;
+  height: 325px;
+  border-radius: 16px;
+  margin: 8px;
+  object-fit: cover;
+  transition: opacity 0.1s ease-in; 
+}
+
+.homeDecorationRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  opacity: 0;
+}

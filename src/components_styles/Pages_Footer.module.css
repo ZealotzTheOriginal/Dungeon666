@@ -1,0 +1,13 @@
+/* Base Principal */
+
+.FooterPro {
+  font-size: 14px;
+  background-image: linear-gradient(to top, #1e0041 25%, #080808);
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  height: 128px;
+  margin-top: 32px;
+  justify-content: center;
+}

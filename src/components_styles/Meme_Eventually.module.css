@@ -1,0 +1,41 @@
+/* FullscreenVideo.module.css */
+
+/* Contenedor principal: fijo, a pantalla completa, en la capa superior */
+.VideoContainer {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: fixed; /* Fijo en la ventana de visualización */
+  top: 0;
+  left: 0;
+  z-index: 9999; /* Asegura que esté por encima de casi todo */
+  margin: 0; 
+  padding: 0;
+  overflow: hidden; /* Oculta cualquier parte del video que sobresalga */
+}
+
+/* El elemento <video>: cubre el 100% del contenedor */
+.videoElement {
+  width: 100%;
+  height: 100%;
+  /* Esto asegura que el video cubra toda el área sin distorsión, 
+     recortando si es necesario */
+  object-fit: cover; 
+  object-position: center; 
+}
+
+/* Bloqueador de interacción: cubre el video y absorbe los clics */
+.OverlayBlocker {
+    position: absolute; /* Relativo al .VideoContainer */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000; /* Ligeramente superior al video (9999) */
+    /* Lo hacemos transparente para que no se vea, solo bloquea el clic */
+    background: transparent; 
+    /* Esta propiedad es crucial: asegura que el puntero no cambie (evitando la ilusión de clic) */
+    pointer-events: auto; 
+    /* Opcional: para asegurar que el cursor no indique un elemento interactivo */
+    cursor: default; 
+}

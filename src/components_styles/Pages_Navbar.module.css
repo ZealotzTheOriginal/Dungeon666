@@ -1,0 +1,58 @@
+/* Base Principal */
+
+.NavbarPro {
+  font-size: 24px;
+  background-image: url(https://i.imgur.com/CFa1gZt.gif);
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  overflow: auto;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  box-shadow:
+    0px 0px 16px 8px #080808,
+    inset 0px -8px 16px 2px #080808; 
+}
+
+.NavbarIMG {
+  margin: 8px;
+  width: 86px;
+  height: 86px;
+  border-radius: 100px;
+  margin-right: auto;
+}
+
+.NavbarLinkPro {
+  font-size: xx-large;
+  padding: 0px 8px 0px 8px;
+  border: solid 1px white;
+  border-radius: 16px;
+  transition: 0.2 ease-in-out;
+}
+
+.NavbarLinkPro:hover {
+  background-color: white;
+  border: solid 1px #450d86;
+}
+
+.NavbarIMG_Eraser{
+  margin: 8px;
+  width: 86px;
+  height: 86px;
+  border-radius: 100px;
+  margin-left: auto;
+}
+
+.GIF_Navbar_Guy{
+  width: 64px;
+  height: 64px;
+}
+
+.GIF_Navbar_Guy_Inverted{
+  width: 64px;
+  height: 64px;
+  transform: scaleX(-1);
+}

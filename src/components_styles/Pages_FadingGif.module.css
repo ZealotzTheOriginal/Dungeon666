@@ -1,0 +1,22 @@
+.gif-fade-in {
+  opacity: 0;
+  transition: opacity 3.0s ease-in-out;
+  opacity: 1;
+  display: block;
+}
+
+.TVEffect {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  margin: 0; 
+  padding: 0;
+}
+
+.gif-container {
+  overflow: hidden;
+}

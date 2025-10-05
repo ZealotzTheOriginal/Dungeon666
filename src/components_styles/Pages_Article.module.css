@@ -1,0 +1,28 @@
+/* Base Principal */
+
+.ArticlePro {
+  font-size: 14px;
+  background-color: #000000;
+  border-radius: 8px;
+  width: 200px;
+  min-height: 200px; 
+  display: flex;
+  align-items: center;
+  justify-content: top;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  margin: 16px;
+}
+
+p{
+    padding: 8px;
+    text-align: center;
+    font-size: x-large;
+}
+
+h2, h3{
+    padding: 8px;
+    text-align: center;
+    font-size: xx-large;
+}

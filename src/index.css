@@ -4,10 +4,11 @@
   font-family: 'Jersey 10', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  scrollbar-color: #7d40e4 #1e1e1e;
+  scrollbar-width: thin;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #080808;
+  background-color: #000000;
 
   font-synthesis: none; 
   text-rendering: optimizeLegibility;
@@ -44,124 +45,38 @@
   opacity: 0;
   transition: opacity 2s ease-in-out;
   display: flex;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 110%;
   position: fixed;
   top: 0;
   z-index: 10;
+  margin: 0; 
+  padding: 0;
+}
+
+.MemeDiscoBall {
+  pointer-events: none;
+  /* La opacidad se mantiene en 0 */
+  opacity: 0; 
+  transition: opacity 2s ease-in-out, transform 5s ease-in-out; 
+  display: flex;
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  top: 0; 
+  z-index: 10;
+  margin: 0; 
+  padding: 0;
+  transform: translateY(-100vh); 
 }
 
 .MemeDisco.visible {
-  opacity: 0.4;
+  opacity: 0.2;
 }
 
-.MemeDiscoText {
-  position: relative; /* Necesario para posicionar el pseudo-elemento */
-  padding: 64px;
-  z-index: 1; /* Esto asegura que el contenido (hijo) esté sobre el pseudo-elemento */
-}
-
-.MemeDiscoText::before {
-  content: '';
-  position: absolute;
-  top: 25%;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background-image: url(https://i.imgur.com/CFa1gZt.gif);
-  background-repeat: repeat;
-  background-size: auto;
-  background-position: center;
-  opacity: 0.5; /* Aplica la opacidad solo al fondo */
-  pointer-events: none;
-  z-index: -1; /* Mueve el pseudo-elemento detrás del contenido */
-  border-radius: 16px;
-  box-shadow: 
-    0px 0px 8px 8px #080808, 
-    inset 0px 0px 8px 8px #080808; 
-}
-
-.NavbarParty {
-  font-size: 24px;
-  background-image: linear-gradient(to bottom, #1e0041 25%, #080808);
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  width: 100%;
-  height: 100px;
-  margin-bottom: 50px;
-  overflow: auto;
-  justify-content: center;
-  top: 0;
-  z-index: 0;
-}
-
-.NavbarLinkPro {
-  font-size: xx-large;
-  padding: 0px 8px 0px 8px;
-  border: solid 1px white;
-  border-radius: 16px;
-  transition: 0.2 ease-in-out;
-}
-
-.NavbarLinkPro:hover {
-  background-color: white;
-  border: solid 1px #450d86;
-}
-
-.NavbarPro {
-  font-size: 24px;
-  background-image: url(https://i.imgur.com/CFa1gZt.gif);
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  width: 100%;
-  overflow: auto;
-  justify-content: center;
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  box-shadow: 
-    0px 0px 8px 8px #080808, 
-    inset 0px 0px 8px 8px #080808; 
-}
-
-.NavbarGradient {
-  background-image: linear-gradient(to bottom, #080808 20%, #08080800);
-  display: flex;
-  width: 100%;
-  height: 102px;
-  overflow: auto;
-  position: sticky;
-  top: 102px;
-  z-index: 2;
-}
-
-.NavbarIMG{
-  margin: 8px;
-  width: 86px;
-  height: 86px;
-  border-radius: 100px;
-  margin-right: auto;
-}
-
-.NavbarIMG_Eraser{
-  margin: 8px;
-  width: 86px;
-  height: 86px;
-  border-radius: 100px;
-  margin-left: auto;
-}
-
-.NavbarIMG_Decoration{
-  width: 64px;
-  height: 64px;
-}
-
-.NavbarIMG_Decoration_Inverted{
-  width: 64px;
-  height: 64px;
-  transform: scaleX(-1);
+.MemeDiscoBall.visible {
+  opacity: 0.8;
+  transform: translateY(0); 
 }
 
 img{
@@ -169,7 +84,6 @@ img{
   height: 100%;
   border-radius: 16px;
   -webkit-user-drag: none; /* Prefijo específico para navegadores WebKit */
-  user-drag: none;
 }
 
 a {
@@ -183,75 +97,12 @@ a:hover {
   color: #450d86;
 }
 
-.HeaderPro {
-  background-image: url(https://i.pinimg.com/originals/34/1e/80/341e800b1f29d3e34ea2eba5a6af205c.gif);
-  background-repeat: repeat;
-  width: 100%;
-  height: 296px;
-  margin: 0px 32px 0px 32px;
-  z-index: 1;
-}
-
-.FooterPro {
-  font-size: 14px;
-  background-image: linear-gradient(to top, #1e0041 25%, #080808);
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  width: 100%;
-  height: 128px;
-  margin-top: 32px;
-  justify-content: center;
-}
-
-.MainPro {
-  font-size: 14px;
-  background-color: #36055e00;
-  display: flex;
-  flex-direction: row; 
-  align-items: center;
-  gap: 32px;
-  width: 90%;
-  justify-content: center;
-  padding: 16px;
-  box-sizing: border-box;
-  flex-wrap: wrap;
-}
-
-.ArticlePro {
-  font-size: 14px;
-  background-color: #110223;
-  border-radius: 8px;
-  width: 200px;
-  min-height: 200px; 
-  display: flex;
-  align-items: center;
-  justify-content: top;
-  flex-direction: column;
-  flex-wrap: wrap;
-  flex-grow: 1;
-  margin: 16px;
-}
-
-.SectionPro {
-  font-size: 14px;
-  background-color: #17042e7d;
-  border-radius: 8px;
-  color: #fff;
-  min-height: 150px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
 body {
   margin: 0;
   display: flex;
   min-width: 320px;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 h1 {
